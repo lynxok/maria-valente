@@ -14,16 +14,16 @@ export const initialSiteSettings: SiteSettings = {
   facebookUrl: 'https://www.facebook.com/mariavalentehupp',
   instagramUrl: '',
   heroImages: [
-    'https://mariavalentehupp.com/wp-content/uploads/2016/08/inicio.jpg',
-    'https://mariavalentehupp.com/wp-content/uploads/2016/08/inicio-1.jpg',
-    'https://mariavalentehupp.com/wp-content/uploads/2016/08/inicio-2.jpg',
-    'https://mariavalentehupp.com/wp-content/uploads/2016/08/inicio-3.jpg',
+    'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/inicio.jpg',
+    'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/inicio-1.jpg',
+    'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/inicio-2.jpg',
+    'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/inicio-3.jpg',
   ],
   heroDurationSeconds: 6,
   heroSlides: [
     {
       id: 'slide-1',
-      url: 'https://mariavalentehupp.com/wp-content/uploads/2016/08/inicio.jpg',
+      url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/inicio.jpg',
       title: 'Obra 01',
       desktopPosition: 'center center',
       mobilePosition: 'center center',
@@ -31,7 +31,7 @@ export const initialSiteSettings: SiteSettings = {
     },
     {
       id: 'slide-2',
-      url: 'https://mariavalentehupp.com/wp-content/uploads/2016/08/inicio-1.jpg',
+      url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/inicio-1.jpg',
       title: 'Obra 02',
       desktopPosition: 'center center',
       mobilePosition: 'center center',
@@ -39,7 +39,7 @@ export const initialSiteSettings: SiteSettings = {
     },
     {
       id: 'slide-3',
-      url: 'https://mariavalentehupp.com/wp-content/uploads/2016/08/inicio-2.jpg',
+      url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/inicio-2.jpg',
       title: 'Obra 03',
       desktopPosition: 'center center',
       mobilePosition: 'center center',
@@ -47,7 +47,7 @@ export const initialSiteSettings: SiteSettings = {
     },
     {
       id: 'slide-4',
-      url: 'https://mariavalentehupp.com/wp-content/uploads/2016/08/inicio-3.jpg',
+      url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/inicio-3.jpg',
       title: 'Obra 04',
       desktopPosition: 'center center',
       mobilePosition: 'center center',
@@ -71,7 +71,7 @@ export const initialCategories: ArtworkCategory[] = [
     images: [
       {
         id: 'ab-1',
-        url: 'https://mariavalentehupp.com/wp-content/uploads/2016/08/Sin-título-09.jpg',
+        url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/sin-titulo-09.jpg',
         title: 'Sin título 09',
         tecnica: 'Cerámica escultórica',
         medidas: '45 × 25 cm',
@@ -81,7 +81,7 @@ export const initialCategories: ArtworkCategory[] = [
         detailImages: [
           {
             id: 'ab-1d',
-            url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/Sin-título-09detalle-2.jpg',
+            url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/sin-titulo-09detalle-2.jpg',
             title: 'Sin título 09 (Detalle)',
             order: 1
           }
@@ -89,7 +89,7 @@ export const initialCategories: ArtworkCategory[] = [
       },
       {
         id: 'ab-2',
-        url: 'https://mariavalentehupp.com/wp-content/uploads/2016/08/Sin-título-08.jpg',
+        url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/sin-titulo-08.jpg',
         title: 'Sin título 08',
         tecnica: 'Cerámica escultórica',
         anio: '2016',
@@ -97,7 +97,7 @@ export const initialCategories: ArtworkCategory[] = [
         detailImages: [
           {
             id: 'ab-2d',
-            url: 'https://mariavalentehupp.com/wp-content/uploads/2016/08/Sin-título-08detalle.jpg',
+            url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/sin-titulo-08detalle.jpg',
             title: 'Sin título 08 (Detalle)',
             order: 1
           }
@@ -105,7 +105,7 @@ export const initialCategories: ArtworkCategory[] = [
       },
       {
         id: 'ab-3',
-        url: 'https://mariavalentehupp.com/wp-content/uploads/2016/08/Sin-título-01.jpg',
+        url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/sin-titulo-01.jpg',
         title: 'Sin título 01',
         tecnica: 'Cerámica policromada',
         anio: '2016',
@@ -113,49 +113,49 @@ export const initialCategories: ArtworkCategory[] = [
       },
       {
         id: 'ab-4',
-        url: 'https://mariavalentehupp.com/wp-content/uploads/2016/08/Sin-título-02.jpg',
+        url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/sin-titulo-02.jpg',
         title: 'Sin título 02',
         tecnica: 'Cerámica esmaltada',
         order: 4
       },
       {
         id: 'ab-5',
-        url: 'https://mariavalentehupp.com/wp-content/uploads/2016/08/Sin-título-03.jpg',
+        url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/sin-titulo-03.jpg',
         title: 'Sin título 03',
         tecnica: 'Cerámica escultórica',
         order: 5
       },
       {
         id: 'ab-6',
-        url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/Sin-título-04-1.jpg',
+        url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/sin-titulo-04-1.jpg',
         title: 'Sin título 04',
         tecnica: 'Cerámica',
         order: 6
       },
       {
         id: 'ab-7',
-        url: 'https://mariavalentehupp.com/wp-content/uploads/2016/08/Sin-título-05.jpg',
+        url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/sin-titulo-05.jpg',
         title: 'Sin título 05',
         tecnica: 'Cerámica',
         order: 7
       },
       {
         id: 'ab-8',
-        url: 'https://mariavalentehupp.com/wp-content/uploads/2016/08/Sin-título-06.jpg',
+        url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/sin-titulo-06.jpg',
         title: 'Sin título 06',
         tecnica: 'Cerámica',
         order: 8
       },
       {
         id: 'ab-9',
-        url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/Sin-título-10-2.jpg',
+        url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/sin-titulo-10-2.jpg',
         title: 'Sin título 10',
         tecnica: 'Cerámica escultórica',
         order: 9
       },
       {
         id: 'ab-10',
-        url: 'https://mariavalentehupp.com/wp-content/uploads/2016/08/Sin-título-07.jpg',
+        url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/sin-titulo-07.jpg',
         title: 'Sin título 07',
         tecnica: 'Cerámica',
         order: 10
@@ -175,57 +175,57 @@ export const initialCategories: ArtworkCategory[] = [
     images: [
       {
         id: 'garg-1',
-        url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/01-Gito-4.jpg',
+        url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/01-gito-4.jpg',
         title: 'Gito',
         tecnica: 'Cerámica escultórica',
         destacada: true,
         order: 1,
         detailImages: [
-          { id: 'garg-1a', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/01a-Gito-2.jpg', title: 'Gito (Vista lateral)', order: 1 },
-          { id: 'garg-1b', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/01b-Gitodetalle-1.jpg', title: 'Gito (Detalle)', order: 2 },
-          { id: 'garg-1c', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/01c-Gitodetalle.jpg', title: 'Gito (Primer plano)', order: 3 },
+          { id: 'garg-1a', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/01a-gito-2.jpg', title: 'Gito (Vista lateral)', order: 1 },
+          { id: 'garg-1b', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/01b-gitodetalle-1.jpg', title: 'Gito (Detalle)', order: 2 },
+          { id: 'garg-1c', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/01c-gitodetalle.jpg', title: 'Gito (Primer plano)', order: 3 },
         ]
       },
       {
         id: 'garg-2',
-        url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/02-Mariposa-1.jpg',
+        url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/02-mariposa-1.jpg',
         title: 'Mariposa',
         tecnica: 'Cerámica escultórica',
         order: 2,
         detailImages: [
-          { id: 'garg-2a', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/02d-Mariposa.jpg', title: 'Mariposa (Detalle)', order: 1 }
+          { id: 'garg-2a', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/02d-mariposa.jpg', title: 'Mariposa (Detalle)', order: 1 }
         ]
       },
       {
         id: 'garg-3',
-        url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/04-Gargola.jpg',
+        url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/04-gargola.jpg',
         title: 'Gárgola',
         tecnica: 'Arcilla y pátina',
         order: 3,
         detailImages: [
-          { id: 'garg-3a', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/04a-Gargola.jpg', title: 'Gárgola (Detalle)', order: 1 }
+          { id: 'garg-3a', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/04a-gargola.jpg', title: 'Gárgola (Detalle)', order: 1 }
         ]
       },
       {
         id: 'garg-4',
-        url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/05b-AVE-URBANAdetalle.jpg',
+        url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/05b-ave-urbanadetalle.jpg',
         title: 'Ave Urbana',
         tecnica: 'Cerámica escultórica',
         order: 4,
         detailImages: [
-          { id: 'garg-4a', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/05a-AVE-URBANAdetalle.jpg', title: 'Ave Urbana (Detalle)', order: 1 }
+          { id: 'garg-4a', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/05a-ave-urbanadetalle.jpg', title: 'Ave Urbana (Detalle)', order: 1 }
         ]
       },
       {
         id: 'garg-5',
-        url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/07-gargola.jpg',
+        url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/07-gargola.jpg',
         title: 'Gárgola guardiana',
         tecnica: 'Cerámica',
         order: 5
       },
       {
         id: 'garg-6',
-        url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/08-VIGIAS.jpg',
+        url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/08-vigias.jpg',
         title: 'Vigías',
         tecnica: 'Cerámica escultórica',
         order: 6
@@ -245,7 +245,7 @@ export const initialCategories: ArtworkCategory[] = [
     images: [
       {
         id: 'monj-1',
-        url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/10-Sin-título.jpg',
+        url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/10-sin-titulo.jpg',
         title: 'Sin título 10',
         tecnica: 'Cerámica escultórica',
         destacada: true,
@@ -253,91 +253,91 @@ export const initialCategories: ArtworkCategory[] = [
       },
       {
         id: 'monj-2',
-        url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/11-Sin-título.jpg',
+        url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/11-sin-titulo.jpg',
         title: 'Sin título 11',
         tecnica: 'Cerámica escultórica',
         order: 2
       },
       {
         id: 'monj-3',
-        url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/01c-Sin-ttulo-6.jpg',
+        url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/01c-sin-ttulo-6.jpg',
         title: 'Sin título 01',
         tecnica: 'Cerámica escultórica',
         order: 3,
         detailImages: [
-          { id: 'monj-3a', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/01d-Sin-ttulo-detalle.jpg', title: 'Detalle frontal', order: 1 },
-          { id: 'monj-3b', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/01e-Sin-ttulo-detalle-1.jpg', title: 'Detalle perfil', order: 2 },
-          { id: 'monj-3c', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/01f-Sin-ttulo-detalle-2.jpg', title: 'Detalle textura', order: 3 },
+          { id: 'monj-3a', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/01d-sin-ttulo-detalle.jpg', title: 'Detalle frontal', order: 1 },
+          { id: 'monj-3b', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/01e-sin-ttulo-detalle-1.jpg', title: 'Detalle perfil', order: 2 },
+          { id: 'monj-3c', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/01f-sin-ttulo-detalle-2.jpg', title: 'Detalle textura', order: 3 },
         ]
       },
       {
         id: 'monj-4',
-        url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/02-Sin-título.jpg',
+        url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/02-sin-titulo.jpg',
         title: 'Sin título 02',
         tecnica: 'Cerámica escultórica',
         order: 4,
         detailImages: [
-          { id: 'monj-4a', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/02b-Sin-título-detalle-2.jpg', title: 'Detalle', order: 1 }
+          { id: 'monj-4a', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/02b-sin-titulo-detalle-2.jpg', title: 'Detalle', order: 1 }
         ]
       },
       {
         id: 'monj-5',
-        url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/03-Sin-título.jpg',
+        url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/03-sin-titulo.jpg',
         title: 'Sin título 03',
         tecnica: 'Cerámica',
         order: 5,
         detailImages: [
-          { id: 'monj-5a', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/03a-Sin-título-detalle.jpg', title: 'Detalle', order: 1 }
+          { id: 'monj-5a', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/03a-sin-titulo-detalle.jpg', title: 'Detalle', order: 1 }
         ]
       },
       {
         id: 'monj-6',
-        url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/04-Narciso.jpg',
+        url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/04-narciso.jpg',
         title: 'Narciso',
         tecnica: 'Cerámica escultórica',
         order: 6,
         detailImages: [
-          { id: 'monj-6a', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/04a-Narciso-detalle-1.jpg', title: 'Narciso (Detalle)', order: 1 }
+          { id: 'monj-6a', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/04a-narciso-detalle-1.jpg', title: 'Narciso (Detalle)', order: 1 }
         ]
       },
       {
         id: 'monj-7',
-        url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/05-Sin-título-1.jpg',
+        url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/05-sin-titulo-1.jpg',
         title: 'Sin título 05',
         tecnica: 'Cerámica',
         order: 7
       },
       {
         id: 'monj-8',
-        url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/06-Sin-título-2.jpg',
+        url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/06-sin-titulo-2.jpg',
         title: 'Sin título 06',
         tecnica: 'Cerámica',
         order: 8
       },
       {
         id: 'monj-9',
-        url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/07-Sin-título-1.jpg',
+        url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/07-sin-titulo-1.jpg',
         title: 'Sin título 07',
         tecnica: 'Cerámica',
         order: 9
       },
       {
         id: 'monj-10',
-        url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/12-Sin-título.jpg',
+        url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/12-sin-titulo.jpg',
         title: 'Sin título 12',
         tecnica: 'Cerámica',
         order: 10
       },
       {
         id: 'monj-11',
-        url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/13-Sin-título.jpg',
+        url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/13-sin-titulo.jpg',
         title: 'Sin título 13',
         tecnica: 'Cerámica',
         order: 11
       },
       {
         id: 'monj-12',
-        url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/09-Sin-título-1.jpg',
+        url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/09-sin-titulo-1.jpg',
         title: 'Sin título 09',
         tecnica: 'Cerámica',
         order: 12
@@ -355,14 +355,14 @@ export const initialCategories: ArtworkCategory[] = [
     createdAt: '2016-08-01',
     description: 'Serie conceptual sobre arquetipos de poder y autoritarismo femenino.',
     images: [
-      { id: 'md-1', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/06-Sin-título.jpg', title: 'Sin título 06', tecnica: 'Cerámica escultórica', destacada: true, order: 1 },
-      { id: 'md-2', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/05-Sin-título.jpg', title: 'Sin título 05', tecnica: 'Cerámica escultórica', order: 2 },
-      { id: 'md-3', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/07-Sin-título.jpg', title: 'Sin título 07', tecnica: 'Cerámica', order: 3 },
-      { id: 'md-4', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/01-Sin-título-2.jpg', title: 'Sin título 01', tecnica: 'Cerámica', order: 4 },
-      { id: 'md-5', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/03-Sin-ttulo-3.jpg', title: 'Sin título 03', tecnica: 'Cerámica', order: 5 },
-      { id: 'md-6', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/04-Sin-ttulo-1.jpg', title: 'Sin título 04', tecnica: 'Cerámica', order: 6 },
-      { id: 'md-7', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/08-Sin-título-1.jpg', title: 'Sin título 08', tecnica: 'Cerámica', order: 7 },
-      { id: 'md-8', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/09-Sin-título.jpg', title: 'Sin título 09', tecnica: 'Cerámica', order: 8 }
+      { id: 'md-1', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/06-sin-titulo.jpg', title: 'Sin título 06', tecnica: 'Cerámica escultórica', destacada: true, order: 1 },
+      { id: 'md-2', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/05-sin-titulo.jpg', title: 'Sin título 05', tecnica: 'Cerámica escultórica', order: 2 },
+      { id: 'md-3', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/07-sin-titulo.jpg', title: 'Sin título 07', tecnica: 'Cerámica', order: 3 },
+      { id: 'md-4', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/01-sin-titulo-2.jpg', title: 'Sin título 01', tecnica: 'Cerámica', order: 4 },
+      { id: 'md-5', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/03-sin-ttulo-3.jpg', title: 'Sin título 03', tecnica: 'Cerámica', order: 5 },
+      { id: 'md-6', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/04-sin-ttulo-1.jpg', title: 'Sin título 04', tecnica: 'Cerámica', order: 6 },
+      { id: 'md-7', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/08-sin-titulo-1.jpg', title: 'Sin título 08', tecnica: 'Cerámica', order: 7 },
+      { id: 'md-8', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/09-sin-titulo.jpg', title: 'Sin título 09', tecnica: 'Cerámica', order: 8 }
     ]
   },
   {
@@ -378,97 +378,97 @@ export const initialCategories: ArtworkCategory[] = [
     images: [
       {
         id: 'nab-1',
-        url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/01-sin-titulo.jpg',
+        url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/01-sin-titulo.jpg',
         title: 'Sin título 01',
         tecnica: 'Cerámica y pátinas',
         destacada: true,
         order: 1,
         detailImages: [
-          { id: 'nab-1a', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/01a-sin-titulo.jpg', title: 'Detalle', order: 1 },
-          { id: 'nab-1c', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/01c-sin-titulo-2.jpg', title: 'Perfil', order: 2 },
-          { id: 'nab-1g', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/01g-sin-titulo-4.jpg', title: 'Perspectiva', order: 3 },
-          { id: 'nab-1i', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/01i-sin-titulo-1.jpg', title: 'Primer plano', order: 4 },
-          { id: 'nab-1d', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/01d-sin-titulo-1.jpg', title: 'Detalle superior', order: 5 },
-          { id: 'nab-1f', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/01f-sin-titulo.jpg', title: 'Detalle base', order: 6 },
-          { id: 'nab-1h', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/01h-sin-titulo-1.jpg', title: 'Vista posterior', order: 7 }
+          { id: 'nab-1a', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/01a-sin-titulo.jpg', title: 'Detalle', order: 1 },
+          { id: 'nab-1c', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/01c-sin-titulo-2.jpg', title: 'Perfil', order: 2 },
+          { id: 'nab-1g', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/01g-sin-titulo-4.jpg', title: 'Perspectiva', order: 3 },
+          { id: 'nab-1i', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/01i-sin-titulo-1.jpg', title: 'Primer plano', order: 4 },
+          { id: 'nab-1d', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/01d-sin-titulo-1.jpg', title: 'Detalle superior', order: 5 },
+          { id: 'nab-1f', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/01f-sin-titulo.jpg', title: 'Detalle base', order: 6 },
+          { id: 'nab-1h', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/01h-sin-titulo-1.jpg', title: 'Vista posterior', order: 7 }
         ]
       },
       {
         id: 'nab-2',
-        url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/02a-sin-titulo-2.jpg',
+        url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/02a-sin-titulo-2.jpg',
         title: 'Sin título 02',
         tecnica: 'Cerámica',
         order: 2
       },
       {
         id: 'nab-3',
-        url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/03-sin-titulo.jpg',
+        url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/03-sin-titulo.jpg',
         title: 'Sin título 03',
         tecnica: 'Cerámica',
         order: 3
       },
       {
         id: 'nab-4',
-        url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/04-sin-titulo.jpg',
+        url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/04-sin-titulo.jpg',
         title: 'Sin título 04',
         tecnica: 'Cerámica',
         order: 4
       },
       {
         id: 'nab-5',
-        url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/05-sin-titulo.jpg',
+        url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/05-sin-titulo.jpg',
         title: 'Sin título 05',
         tecnica: 'Cerámica',
         order: 5
       },
       {
         id: 'nab-6',
-        url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/06a-sin-titulo-1.jpg',
+        url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/06a-sin-titulo-1.jpg',
         title: 'Sin título 06',
         tecnica: 'Cerámica',
         order: 6
       },
       {
         id: 'nab-7',
-        url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/07a-sin-titulo-100x100.jpg',
+        url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/07a-sin-titulo-100x100.jpg',
         title: 'Sin título 07',
         tecnica: 'Cerámica',
         order: 7,
         detailImages: [
-          { id: 'nab-7c', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/07c-sin-titulo.jpg', title: 'Detalle', order: 1 }
+          { id: 'nab-7c', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/07c-sin-titulo.jpg', title: 'Detalle', order: 1 }
         ]
       },
       {
         id: 'nab-8',
-        url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/08-sin-titulo-2.jpg',
+        url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/08-sin-titulo-2.jpg',
         title: 'Sin título 08',
         tecnica: 'Cerámica',
         order: 8
       },
       {
         id: 'nab-9',
-        url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/09-sin-titulo.jpg',
+        url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/09-sin-titulo.jpg',
         title: 'Sin título 09',
         tecnica: 'Cerámica',
         order: 9
       },
       {
         id: 'nab-10',
-        url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/10-sin-titulo-1.jpg',
+        url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/10-sin-titulo-1.jpg',
         title: 'Sin título 10',
         tecnica: 'Cerámica',
         order: 10
       },
       {
         id: 'nab-11',
-        url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/11-sin-titulo.jpg',
+        url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/11-sin-titulo.jpg',
         title: 'Sin título 11',
         tecnica: 'Cerámica',
         order: 11
       },
       {
         id: 'nab-12',
-        url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/12-sin-titulo.jpg',
+        url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/12-sin-titulo.jpg',
         title: 'Sin título 12',
         tecnica: 'Cerámica',
         order: 12
@@ -488,10 +488,10 @@ export const initialCategories: ArtworkCategory[] = [
     createdAt: '2016-08-01',
     description: 'Intervención de arte público urbano en la peatonal de Paraná.',
     images: [
-      { id: 'card-1', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/4-Monjes.jpg', title: 'Los cardinales 01', tecnica: 'Intervención urbana', destacada: true, order: 1 },
-      { id: 'card-2', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/4-Monjes-4.jpg', title: 'Los cardinales 02', tecnica: 'Intervención urbana', order: 2 },
-      { id: 'card-3', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/4-Monjes-1-2.jpg', title: 'Los cardinales 03', tecnica: 'Intervención urbana', order: 3 },
-      { id: 'card-4', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/4-Monjes-Retocado.jpg', title: 'Los cardinales 04', tecnica: 'Intervención urbana', order: 4 },
+      { id: 'card-1', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/4-monjes.jpg', title: 'Los cardinales 01', tecnica: 'Intervención urbana', destacada: true, order: 1 },
+      { id: 'card-2', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/4-monjes-4.jpg', title: 'Los cardinales 02', tecnica: 'Intervención urbana', order: 2 },
+      { id: 'card-3', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/4-monjes-1-2.jpg', title: 'Los cardinales 03', tecnica: 'Intervención urbana', order: 3 },
+      { id: 'card-4', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/4-monjes-retocado.jpg', title: 'Los cardinales 04', tecnica: 'Intervención urbana', order: 4 },
     ]
   },
   {
@@ -505,14 +505,14 @@ export const initialCategories: ArtworkCategory[] = [
     createdAt: '2016-08-01',
     description: 'Diseño, manufactura tradicional y restauración de vitrales sagrados.',
     images: [
-      { id: 'vit-1', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/DSC00757.jpg', title: 'Vitral sagrado 01', tecnica: 'Vitral tradicional', destacada: true, order: 1 },
-      { id: 'vit-2', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/DSC00759.jpg', title: 'Vitral sagrado 02', tecnica: 'Vitral tradicional', order: 2 },
-      { id: 'vit-3', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/DSC00742.jpg', title: 'Vitral sagrado 03', tecnica: 'Vitral tradicional', order: 3 },
-      { id: 'vit-4', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/DSC00749.jpg', title: 'Vitral sagrado 04', tecnica: 'Vitral tradicional', order: 4 },
-      { id: 'vit-5', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/DSC00743.jpg', title: 'Vitral sagrado 05', tecnica: 'Vitral tradicional', order: 5 },
-      { id: 'vit-6', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/DSC00741.jpg', title: 'Vitral sagrado 06', tecnica: 'Vitral tradicional', order: 6 },
-      { id: 'vit-7', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/vitral-west-chester-ohio-usa.jpg', title: 'Vitral West Chester (Ohio, USA)', tecnica: 'Vitral tradicional', order: 7 },
-      { id: 'vit-8', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/DSC00750.jpg', title: 'Vitral sagrado 08', tecnica: 'Vitral tradicional', order: 8 },
+      { id: 'vit-1', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/dsc00757.jpg', title: 'Vitral sagrado 01', tecnica: 'Vitral tradicional', destacada: true, order: 1 },
+      { id: 'vit-2', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/dsc00759.jpg', title: 'Vitral sagrado 02', tecnica: 'Vitral tradicional', order: 2 },
+      { id: 'vit-3', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/dsc00742.jpg', title: 'Vitral sagrado 03', tecnica: 'Vitral tradicional', order: 3 },
+      { id: 'vit-4', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/dsc00749.jpg', title: 'Vitral sagrado 04', tecnica: 'Vitral tradicional', order: 4 },
+      { id: 'vit-5', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/dsc00743.jpg', title: 'Vitral sagrado 05', tecnica: 'Vitral tradicional', order: 5 },
+      { id: 'vit-6', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/dsc00741.jpg', title: 'Vitral sagrado 06', tecnica: 'Vitral tradicional', order: 6 },
+      { id: 'vit-7', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/vitral-west-chester-ohio-usa.jpg', title: 'Vitral West Chester (Ohio, USA)', tecnica: 'Vitral tradicional', order: 7 },
+      { id: 'vit-8', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/dsc00750.jpg', title: 'Vitral sagrado 08', tecnica: 'Vitral tradicional', order: 8 },
     ]
   },
 
@@ -528,16 +528,16 @@ export const initialCategories: ArtworkCategory[] = [
     createdAt: '2016-08-01',
     description: 'Exposición junto a la artista plástica Adriana Tessore. Galería El Farol, Paraná – Entre Ríos.',
     images: [
-      { id: 'ef-1', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/01-muestra-1.jpg', title: 'Muestra 01', tecnica: 'Escultura / Instalación', destacada: true, order: 1 },
-      { id: 'ef-2', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/02-muestra.jpg', title: 'Muestra 02', tecnica: 'Escultura', order: 2 },
-      { id: 'ef-3', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/03-muestra-1.jpg', title: 'Muestra 03', tecnica: 'Escultura', order: 3 },
-      { id: 'ef-4', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/04-muestra.jpg', title: 'Muestra 04', tecnica: 'Escultura', order: 4 },
-      { id: 'ef-5', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/06-muestra-1.jpg', title: 'Muestra 05', tecnica: 'Escultura', order: 5 },
-      { id: 'ef-6', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/07-muestra.jpg', title: 'Muestra 06', tecnica: 'Escultura', order: 6 },
-      { id: 'ef-7', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/08-muestra.jpg', title: 'Muestra 07', tecnica: 'Escultura', order: 7 },
-      { id: 'ef-8', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/09-muestra-1.jpg', title: 'Muestra 08', tecnica: 'Escultura', order: 8 },
-      { id: 'ef-9', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/10-muestra.jpg', title: 'Muestra 09', tecnica: 'Escultura', order: 9 },
-      { id: 'ef-10', url: 'https://mariavalentehupp.com/wp-content/uploads/2016/07/11-muestra.jpg', title: 'Muestra 10', tecnica: 'Escultura', order: 10 },
+      { id: 'ef-1', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/01-muestra-1.jpg', title: 'Muestra 01', tecnica: 'Escultura / Instalación', destacada: true, order: 1 },
+      { id: 'ef-2', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/02-muestra.jpg', title: 'Muestra 02', tecnica: 'Escultura', order: 2 },
+      { id: 'ef-3', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/03-muestra-1.jpg', title: 'Muestra 03', tecnica: 'Escultura', order: 3 },
+      { id: 'ef-4', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/04-muestra.jpg', title: 'Muestra 04', tecnica: 'Escultura', order: 4 },
+      { id: 'ef-5', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/06-muestra-1.jpg', title: 'Muestra 05', tecnica: 'Escultura', order: 5 },
+      { id: 'ef-6', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/07-muestra.jpg', title: 'Muestra 06', tecnica: 'Escultura', order: 6 },
+      { id: 'ef-7', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/08-muestra.jpg', title: 'Muestra 07', tecnica: 'Escultura', order: 7 },
+      { id: 'ef-8', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/09-muestra-1.jpg', title: 'Muestra 08', tecnica: 'Escultura', order: 8 },
+      { id: 'ef-9', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/10-muestra.jpg', title: 'Muestra 09', tecnica: 'Escultura', order: 9 },
+      { id: 'ef-10', url: 'https://pzmyotvuczbszxrpkhdb.supabase.co/storage/v1/object/public/artworks/migrated/11-muestra.jpg', title: 'Muestra 10', tecnica: 'Escultura', order: 10 },
     ]
   }
 ]
