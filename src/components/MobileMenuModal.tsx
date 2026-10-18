@@ -288,9 +288,9 @@ export const MobileMenuModal: React.FC<MobileMenuModalProps> = ({
           © {CURRENT_YEAR} {settings.artistName}
         </p>
 
-        {/* Desarrollado por LYNX Consulting */}
-        <div className="mt-3 flex flex-col items-center justify-center space-y-1.5 text-neutral-400">
-          <span className="text-[10px] tracking-wider uppercase font-light">
+        {/* Desarrollado por LYNX Consulting (inline al lado) */}
+        <div className="mt-2.5 flex items-center justify-center space-x-2 text-neutral-400">
+          <span className="text-[10px] tracking-wider uppercase font-light whitespace-nowrap">
             Desarrollado por
           </span>
           <a
@@ -298,12 +298,12 @@ export const MobileMenuModal: React.FC<MobileMenuModalProps> = ({
             target="_blank"
             rel="noopener noreferrer"
             title="LYNX Consulting"
-            className="inline-block opacity-80 hover:opacity-100 transition-opacity"
+            className="inline-flex items-center opacity-85 hover:opacity-100 transition-opacity"
           >
             <img
               src="/lynx-logo-black.png"
               alt="LYNX Consulting"
-              className="h-10 w-auto object-contain"
+              className="h-5 w-auto object-contain"
             />
           </a>
         </div>
