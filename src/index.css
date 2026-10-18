@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-white text-neutral-800 antialiased font-sans;
+    font-family: 'Raleway', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  }
+}
+
+/* Microanimaciones de Navegación */
+:root {
+  --ease-soft: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Stagger de subítems al abrir sección */
+@keyframes subitemCascade {
+  0% {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-subitem {
+  animation: subitemCascade 240ms var(--ease-soft) forwards;
+}
+
+/* Respeto estricto a prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .animate-subitem {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
