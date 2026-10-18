@@ -181,31 +181,38 @@ export const AdminDashboardPage: React.FC = () => {
     })
   }
 
-  // Local file upload simulated with FileReader to base64
-  const handleLocalImageUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  // Upload image to Supabase Storage artworks bucket
+  const handleLocalImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files
     if (!files || files.length === 0 || !editingCategory) return
 
-    Array.from(files).forEach((file, index) => {
-      const reader = new FileReader()
-      reader.onload = (loadEvent) => {
-        const base64Url = loadEvent.target?.result as string
-        if (base64Url) {
-          const newImg: ArtworkImage = {
-            id: `img-${Date.now()}-${Math.random().toString(36).substr(2, 4)}`,
-            url: base64Url,
-            title: file.name.replace(/\.[^/.]+$/, ''),
-            order: (editingCategory.images?.length || 0) + 1,
-            destacada: (editingCategory.images?.length || 0) === 0 && index === 0
-          }
-          setEditingCategory(prev => prev ? ({
-            ...prev,
-            images: [...(prev.images || []), newImg]
-          }) : null)
+    const fileList = Array.from(files)
+    setIsSyncing(true)
+    setSyncStatusMsg(`Subiendo ${fileList.length} imagen(es) al Storage de Supabase...`)
+
+    for (let i = 0; i < fileList.length; i++) {
+      const file = fileList[i]
+      try {
+        const publicUrl = await contentService.uploadImage(file, 'artworks')
+        const newImg: ArtworkImage = {
+          id: `img-${Date.now()}-${Math.random().toString(36).substr(2, 4)}`,
+          url: publicUrl,
+          title: file.name.replace(/\.[^/.]+$/, ''),
+          order: (editingCategory.images?.length || 0) + i + 1,
+          destacada: (editingCategory.images?.length || 0) === 0 && i === 0
         }
+        setEditingCategory(prev => prev ? ({
+          ...prev,
+          images: [...(prev.images || []), newImg]
+        }) : null)
+      } catch (err) {
+        console.error('Error subiendo imagen:', err)
       }
-      reader.readAsDataURL(file)
-    })
+    }
+    setIsSyncing(false)
+    setSyncStatusMsg('¡Imágenes subidas a Supabase Storage!')
+    setTimeout(() => setSyncStatusMsg(null), 3000)
+    e.target.value = ''
   }
 
   // Edit technical fields of an artwork
@@ -223,30 +230,36 @@ export const AdminDashboardPage: React.FC = () => {
     setEditingImage(null)
   }
 
-  // Add detail image to editing image
-  const handleAddDetailImageToImage = (e: React.ChangeEvent<HTMLInputElement>) => {
+  // Add detail image to editing image using Supabase Storage
+  const handleAddDetailImageToImage = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files
     if (!files || files.length === 0 || !editingImage) return
 
-    Array.from(files).forEach(file => {
-      const reader = new FileReader()
-      reader.onload = (loadEvent) => {
-        const base64Url = loadEvent.target?.result as string
-        if (base64Url) {
-          const detailImg: ArtworkImage = {
-            id: `detail-${Date.now()}-${Math.random().toString(36).substr(2, 4)}`,
-            url: base64Url,
-            title: `${editingImage.title || 'Obra'} (Detalle)`,
-            order: (editingImage.detailImages?.length || 0) + 1
-          }
-          setEditingImage(prev => prev ? ({
-            ...prev,
-            detailImages: [...(prev.detailImages || []), detailImg]
-          }) : null)
+    const fileList = Array.from(files)
+    setIsSyncing(true)
+    setSyncStatusMsg('Subiendo detalle a Supabase...')
+
+    for (let i = 0; i < fileList.length; i++) {
+      const file = fileList[i]
+      try {
+        const publicUrl = await contentService.uploadImage(file, 'detalles')
+        const detailImg: ArtworkImage = {
+          id: `detail-${Date.now()}-${Math.random().toString(36).substr(2, 4)}`,
+          url: publicUrl,
+          title: `${editingImage.title || 'Obra'} (Detalle)`,
+          order: (editingImage.detailImages?.length || 0) + i + 1
         }
+        setEditingImage(prev => prev ? ({
+          ...prev,
+          detailImages: [...(prev.detailImages || []), detailImg]
+        }) : null)
+      } catch (err) {
+        console.error('Error subiendo foto de detalle:', err)
       }
-      reader.readAsDataURL(file)
-    })
+    }
+    setIsSyncing(false)
+    setSyncStatusMsg(null)
+    e.target.value = ''
   }
 
   // Save CV
@@ -265,35 +278,44 @@ export const AdminDashboardPage: React.FC = () => {
     }, 2000)
   }
 
-  // Hero Management Handlers
-  const handleUploadHeroImages = (e: React.ChangeEvent<HTMLInputElement>) => {
+  // Hero Management Handlers with Supabase Storage
+  const handleUploadHeroImages = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const files = e.target.files
     if (!files || files.length === 0) return
 
-    Array.from(files).forEach(file => {
-      const reader = new FileReader()
-      reader.onload = (loadEvent) => {
-        const base64Url = loadEvent.target?.result as string
-        if (base64Url) {
-          const newSlide = {
-            id: `hero-${Date.now()}-${Math.random().toString(36).substr(2, 4)}`,
-            url: base64Url,
-            title: file.name.replace(/\.[^/.]+$/, ''),
-            desktopPosition: '50% 50%',
-            mobilePosition: '50% 50%',
-            order: (settings.heroSlides?.length || 0) + 1
-          }
-          const updatedSlides = [...(settings.heroSlides || []), newSlide]
-          const updated = {
-            ...settings,
-            heroSlides: updatedSlides,
-            heroImages: updatedSlides.map(s => s.url)
-          }
-          saveSettingsWithNotice(updated)
+    const fileList = Array.from(files)
+    setIsSyncing(true)
+    setSyncStatusMsg(`Subiendo ${fileList.length} imagen(es) de Hero a Supabase...`)
+
+    let updatedSlides = [...(settings.heroSlides || [])]
+
+    for (let i = 0; i < fileList.length; i++) {
+      const file = fileList[i]
+      try {
+        const publicUrl = await contentService.uploadImage(file, 'hero')
+        const newSlide = {
+          id: `hero-${Date.now()}-${Math.random().toString(36).substr(2, 4)}`,
+          url: publicUrl,
+          title: file.name.replace(/\.[^/.]+$/, ''),
+          desktopPosition: '50% 50%',
+          mobilePosition: '50% 50%',
+          order: updatedSlides.length + 1
         }
+        updatedSlides = [...updatedSlides, newSlide]
+      } catch (err) {
+        console.error('Error subiendo imagen de Hero:', err)
       }
-      reader.readAsDataURL(file)
-    })
+    }
+
+    const updated = {
+      ...settings,
+      heroSlides: updatedSlides,
+      heroImages: updatedSlides.map(s => s.url)
+    }
+    saveSettingsWithNotice(updated)
+    setIsSyncing(false)
+    setSyncStatusMsg('¡Imágenes de portada subidas!')
+    setTimeout(() => setSyncStatusMsg(null), 3000)
     e.target.value = ''
   }
 
@@ -579,7 +601,7 @@ export const AdminDashboardPage: React.FC = () => {
                 <p className="text-xs text-neutral-500 mb-2">
                   URL de la imagen o retrato que se mostrará al inicio de la sección de Biografía.
                 </p>
-                <div className="flex items-center space-x-3">
+                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                   <input
                     type="url"
                     value={cvContent.portrait || ''}
@@ -587,11 +609,36 @@ export const AdminDashboardPage: React.FC = () => {
                     placeholder="https://... /foto-maria-valente.jpg"
                     className="flex-1 p-2.5 border border-neutral-300 rounded-xs text-sm focus:outline-none focus:border-neutral-900"
                   />
+                  <label className="inline-flex items-center justify-center px-4 py-2.5 border border-neutral-300 rounded-xs text-xs font-medium text-neutral-700 bg-white hover:bg-neutral-50 cursor-pointer transition-colors shrink-0">
+                    <Upload className="w-3.5 h-3.5 mr-1.5" />
+                    Subir Foto
+                    <input
+                      type="file"
+                      accept="image/*"
+                      className="hidden"
+                      onChange={async (e) => {
+                        const file = e.target.files?.[0]
+                        if (!file) return
+                        setIsSyncing(true)
+                        setSyncStatusMsg('Subiendo retrato a Supabase...')
+                        try {
+                          const url = await contentService.uploadImage(file, 'cv')
+                          setCvContent(prev => ({ ...prev, portrait: url }))
+                          setSyncStatusMsg('¡Retrato subido!')
+                        } catch (err) {
+                          console.error(err)
+                        }
+                        setIsSyncing(false)
+                        setTimeout(() => setSyncStatusMsg(null), 3000)
+                        e.target.value = ''
+                      }}
+                    />
+                  </label>
                   {cvContent.portrait && (
                     <img 
                       src={cvContent.portrait} 
                       alt="Vista previa" 
-                      className="w-12 h-12 object-cover border border-neutral-200 rounded-xs shrink-0" 
+                      className="w-12 h-12 object-cover border border-neutral-200 rounded-xs shrink-0 self-center sm:self-auto" 
                     />
                   )}
                 </div>

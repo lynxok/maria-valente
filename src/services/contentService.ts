@@ -51,6 +51,48 @@ function mapCategoryToDb(cat: ArtworkCategory) {
 }
 
 export const contentService = {
+  // Subida de imagen a Supabase Storage con fallback a Base64 si falla la red/permiso
+  async uploadImage(file: File, folder = 'general'): Promise<string> {
+    try {
+      const ext = file.name.split('.').pop() || 'jpg'
+      const sanitizedName = file.name
+        .replace(/\.[^/.]+$/, '')
+        .toLowerCase()
+        .replace(/[^a-z0-9_-]/g, '-')
+      const fileName = `${folder}/${Date.now()}-${sanitizedName}.${ext}`
+
+      const { data, error } = await supabase.storage
+        .from('artworks')
+        .upload(fileName, file, {
+          cacheControl: '31536000',
+          upsert: false
+        })
+
+      if (error) {
+        console.warn('Error subiendo a Supabase Storage, fallback a Base64:', error.message)
+        return await this.fileToBase64(file)
+      }
+
+      const { data: publicUrlData } = supabase.storage
+        .from('artworks')
+        .getPublicUrl(data.path)
+
+      return publicUrlData.publicUrl
+    } catch (err) {
+      console.warn('Fallo inesperado al subir a Storage, fallback a Base64:', err)
+      return await this.fileToBase64(file)
+    }
+  },
+
+  fileToBase64(file: File): Promise<string> {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader()
+      reader.onload = () => resolve(reader.result as string)
+      reader.onerror = (e) => reject(e)
+      reader.readAsDataURL(file)
+    })
+  },
+
   // Sincronización inicial desde Supabase a LocalStorage
   async syncFromSupabase(): Promise<boolean> {
     try {
